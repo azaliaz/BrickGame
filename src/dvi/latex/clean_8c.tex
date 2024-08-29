@@ -1,0 +1,136 @@
+\doxysection{/\+Users/azaliagm/brick21/\+C7\+\_\+\+Brick\+Game\+\_\+v1.0-\/1/src/brick\+\_\+game/tetris/clean.c File Reference}
+\hypertarget{clean_8c}{}\label{clean_8c}\index{/Users/azaliagm/brick21/C7\_BrickGame\_v1.0-\/1/src/brick\_game/tetris/clean.c@{/Users/azaliagm/brick21/C7\_BrickGame\_v1.0-\/1/src/brick\_game/tetris/clean.c}}
+{\ttfamily \#include "{}tetris.\+h"{}}\newline
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{clean_8c_ae1dd475406ed9142baea66fad1f6bb23}{free\+Print\+Field}} (int \texorpdfstring{$\ast$}{*}\texorpdfstring{$\ast$}{*}print\+\_\+field, int height)
+\begin{DoxyCompactList}\small\item\em Освобождает память, выделенную под двумерный массив {\ttfamily print\+\_\+field}. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{clean_8c_a2fc7304f1b25d4a63461fe0f36706f1c}{free\+Next}} (int \texorpdfstring{$\ast$}{*}\texorpdfstring{$\ast$}{*}next, int size)
+\begin{DoxyCompactList}\small\item\em Освобождает память, выделенную под двумерный массив {\ttfamily next}. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{clean_8c_a2e16b913686bf0ee03b5a9ba77810454}{free\+Tet\+Field}} (\mbox{\hyperlink{struct_tet_field}{Tet\+Field}} \texorpdfstring{$\ast$}{*}field)
+\begin{DoxyCompactList}\small\item\em Освобождает память, выделенную под игровое поле. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{clean_8c_a060b5733f145de1259820f055c23dd48}{free\+Tet\+Figure}} (\mbox{\hyperlink{struct_tet_figure}{Tet\+Figure}} \texorpdfstring{$\ast$}{*}figure)
+\begin{DoxyCompactList}\small\item\em Освобождает память, выделенную под фигуру. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{clean_8c_a8d8624dc6fe1141b529ba052b45de547}{free\+Tet\+Templates}} (\mbox{\hyperlink{struct_tet_templates}{Tet\+Templates}} \texorpdfstring{$\ast$}{*}templates)
+\begin{DoxyCompactList}\small\item\em Освобождает память, выделенную под шаблоны фигур. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{clean_8c_ab1ea2920b70aa50414e265c62b59b173}{free\+Resources}} (\mbox{\hyperlink{struct_game_info__t}{Game\+Info\+\_\+t}} \mbox{\hyperlink{create_8c_aff195c742b1d48adc4e14091fd7d0f06}{game}}, int size, int height)
+\begin{DoxyCompactList}\small\item\em Освобождает память, занятую полем для отображения игры и следующей фигурой. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{clean_8c_a092a7cbbbdcf3e144042bbb4091271b8}{free\+Game}} (\mbox{\hyperlink{struct_game_info__t}{Game\+Info\+\_\+t}} \texorpdfstring{$\ast$}{*}tetg)
+\begin{DoxyCompactList}\small\item\em Освобождает всю память, выделенную под игру. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Function Documentation}
+\Hypertarget{clean_8c_a092a7cbbbdcf3e144042bbb4091271b8}\index{clean.c@{clean.c}!freeGame@{freeGame}}
+\index{freeGame@{freeGame}!clean.c@{clean.c}}
+\doxysubsubsection{\texorpdfstring{freeGame()}{freeGame()}}
+{\footnotesize\ttfamily \label{clean_8c_a092a7cbbbdcf3e144042bbb4091271b8} 
+void free\+Game (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_game_info__t}{Game\+Info\+\_\+t}} \texorpdfstring{$\ast$}{*}}]{game}{}\end{DoxyParamCaption})}
+
+
+
+Освобождает всю память, выделенную под игру. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em game} & Указатель на структуру {\ttfamily \doxylink{struct_game_info__t}{Game\+Info\+\_\+t}}, представляющую собой информацию. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{clean_8c_a2fc7304f1b25d4a63461fe0f36706f1c}\index{clean.c@{clean.c}!freeNext@{freeNext}}
+\index{freeNext@{freeNext}!clean.c@{clean.c}}
+\doxysubsubsection{\texorpdfstring{freeNext()}{freeNext()}}
+{\footnotesize\ttfamily \label{clean_8c_a2fc7304f1b25d4a63461fe0f36706f1c} 
+void free\+Next (\begin{DoxyParamCaption}\item[{int \texorpdfstring{$\ast$}{*}\texorpdfstring{$\ast$}{*}}]{next}{, }\item[{int}]{size}{}\end{DoxyParamCaption})}
+
+
+
+Освобождает память, выделенную под двумерный массив {\ttfamily next}. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em next} & Двумерный массив целых чисел, представляющий собой следующую фигуру. \\
+\hline
+{\em size} & Размер массива. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{clean_8c_ae1dd475406ed9142baea66fad1f6bb23}\index{clean.c@{clean.c}!freePrintField@{freePrintField}}
+\index{freePrintField@{freePrintField}!clean.c@{clean.c}}
+\doxysubsubsection{\texorpdfstring{freePrintField()}{freePrintField()}}
+{\footnotesize\ttfamily \label{clean_8c_ae1dd475406ed9142baea66fad1f6bb23} 
+void free\+Print\+Field (\begin{DoxyParamCaption}\item[{int \texorpdfstring{$\ast$}{*}\texorpdfstring{$\ast$}{*}}]{print\+\_\+field}{, }\item[{int}]{height}{}\end{DoxyParamCaption})}
+
+
+
+Освобождает память, выделенную под двумерный массив {\ttfamily print\+\_\+field}. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em print\+\_\+field} & Двумерный массив целых чисел, представляющий собой поле для печати. \\
+\hline
+{\em height} & Высота массива. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{clean_8c_ab1ea2920b70aa50414e265c62b59b173}\index{clean.c@{clean.c}!freeResources@{freeResources}}
+\index{freeResources@{freeResources}!clean.c@{clean.c}}
+\doxysubsubsection{\texorpdfstring{freeResources()}{freeResources()}}
+{\footnotesize\ttfamily \label{clean_8c_ab1ea2920b70aa50414e265c62b59b173} 
+void free\+Resources (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_game_info__t}{Game\+Info\+\_\+t}}}]{game}{, }\item[{int}]{size}{, }\item[{int}]{height}{}\end{DoxyParamCaption})}
+
+
+
+Освобождает память, занятую полем для отображения игры и следующей фигурой. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em game} & Текущие данные игры, включая указатели на поле и следующую фигуру. \\
+\hline
+{\em size} & Размер следующей фигуры. \\
+\hline
+{\em height} & Высота поля для отображения игры. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{clean_8c_a2e16b913686bf0ee03b5a9ba77810454}\index{clean.c@{clean.c}!freeTetField@{freeTetField}}
+\index{freeTetField@{freeTetField}!clean.c@{clean.c}}
+\doxysubsubsection{\texorpdfstring{freeTetField()}{freeTetField()}}
+{\footnotesize\ttfamily \label{clean_8c_a2e16b913686bf0ee03b5a9ba77810454} 
+void free\+Tet\+Field (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_tet_field}{Tet\+Field}} \texorpdfstring{$\ast$}{*}}]{tetf}{}\end{DoxyParamCaption})}
+
+
+
+Освобождает память, выделенную под игровое поле. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em tetf} & Указатель на структуру поля, которую необходимо освободить. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{clean_8c_a060b5733f145de1259820f055c23dd48}\index{clean.c@{clean.c}!freeTetFigure@{freeTetFigure}}
+\index{freeTetFigure@{freeTetFigure}!clean.c@{clean.c}}
+\doxysubsubsection{\texorpdfstring{freeTetFigure()}{freeTetFigure()}}
+{\footnotesize\ttfamily \label{clean_8c_a060b5733f145de1259820f055c23dd48} 
+void free\+Tet\+Figure (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_tet_figure}{Tet\+Figure}} \texorpdfstring{$\ast$}{*}}]{tf}{}\end{DoxyParamCaption})}
+
+
+
+Освобождает память, выделенную под фигуру. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em tf} & Указатель на структуру фигуры, которую необходимо освободить. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{clean_8c_a8d8624dc6fe1141b529ba052b45de547}\index{clean.c@{clean.c}!freeTetTemplates@{freeTetTemplates}}
+\index{freeTetTemplates@{freeTetTemplates}!clean.c@{clean.c}}
+\doxysubsubsection{\texorpdfstring{freeTetTemplates()}{freeTetTemplates()}}
+{\footnotesize\ttfamily \label{clean_8c_a8d8624dc6fe1141b529ba052b45de547} 
+void free\+Tet\+Templates (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_tet_templates}{Tet\+Templates}} \texorpdfstring{$\ast$}{*}}]{tet\+\_\+templates}{}\end{DoxyParamCaption})}
+
+
+
+Освобождает память, выделенную под шаблоны фигур. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em tetft} & Указатель на структуру {\ttfamily \doxylink{struct_tet_templates}{Tet\+Templates}}, представляющую собой шаблоны фигур. \\
+\hline
+\end{DoxyParams}

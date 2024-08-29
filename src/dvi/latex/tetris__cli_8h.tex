@@ -1,0 +1,139 @@
+\doxysection{/\+Users/azaliagm/brick21/\+C7\+\_\+\+Brick\+Game\+\_\+v1.0-\/1/src/gui/cli/tetris\+\_\+cli.h File Reference}
+\hypertarget{tetris__cli_8h}{}\label{tetris__cli_8h}\index{/Users/azaliagm/brick21/C7\_BrickGame\_v1.0-\/1/src/gui/cli/tetris\_cli.h@{/Users/azaliagm/brick21/C7\_BrickGame\_v1.0-\/1/src/gui/cli/tetris\_cli.h}}
+{\ttfamily \#include $<$ncurses.\+h$>$}\newline
+{\ttfamily \#include "{}../../brick\+\_\+game/tetris/tetris.\+h"{}}\newline
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{tetris_8h_a7ba289d7b97db30e0b7041ca2cef75a9}{User\+Action\+\_\+t}} \mbox{\hyperlink{tetris__cli_8h_a1908b0d6804e288c1366fb9da01828f7}{get\+\_\+signal}} ()
+\begin{DoxyCompactList}\small\item\em Получает пользовательский ввод и возвращает соответствующее действие. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{tetris__cli_8h_a934cd4cdc7ae190d0d2c9339a05cb9e0}{draw\+Field}} (\mbox{\hyperlink{struct_game_info__t}{Game\+Info\+\_\+t}} \mbox{\hyperlink{create_8c_aff195c742b1d48adc4e14091fd7d0f06}{game}})
+\begin{DoxyCompactList}\small\item\em Отрисовывает игровое поле. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{tetris__cli_8h_a91e37815eef7996d93cecee76fe27857}{print\+Game}} (\mbox{\hyperlink{struct_game_info__t}{Game\+Info\+\_\+t}} \mbox{\hyperlink{create_8c_aff195c742b1d48adc4e14091fd7d0f06}{game}}, struct timespec sp\+\_\+start, struct timespec sp\+\_\+end)
+\begin{DoxyCompactList}\small\item\em Отображает текущее состояние игры. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{tetris__cli_8h_a4d45e45b472cc7ccaa4507c9234c0659}{time\+Function}} (struct timespec sp\+\_\+start, struct timespec sp\+\_\+end, int game\+\_\+speed)
+\begin{DoxyCompactList}\small\item\em Обрабатывает задержку, чтобы обеспечить желаемую скорость игры. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{tetris__cli_8h_a3a3a94b9ab7ef94a150097279996b57a}{print\+Next\+Figure}} (\mbox{\hyperlink{struct_game_info__t}{Game\+Info\+\_\+t}} \mbox{\hyperlink{create_8c_aff195c742b1d48adc4e14091fd7d0f06}{game}})
+\begin{DoxyCompactList}\small\item\em Отображает следующую фигуру на экране, которая будет падать. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{tetris__cli_8h_abd1f8c83fcebf1f40bc3fec0f96fb2bb}{init\+Colors}} ()
+\begin{DoxyCompactList}\small\item\em Инициализирует цветовые пары для отрисовки. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{tetris__cli_8h_ad89ae64345ca68d3463195edec7b9c1f}{print\+Info}} (\mbox{\hyperlink{struct_game_info__t}{Game\+Info\+\_\+t}} \mbox{\hyperlink{create_8c_aff195c742b1d48adc4e14091fd7d0f06}{game}})
+\begin{DoxyCompactList}\small\item\em Отображает информацию о текущем состоянии игры. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Function Documentation}
+\Hypertarget{tetris__cli_8h_a934cd4cdc7ae190d0d2c9339a05cb9e0}\index{tetris\_cli.h@{tetris\_cli.h}!drawField@{drawField}}
+\index{drawField@{drawField}!tetris\_cli.h@{tetris\_cli.h}}
+\doxysubsubsection{\texorpdfstring{drawField()}{drawField()}}
+{\footnotesize\ttfamily \label{tetris__cli_8h_a934cd4cdc7ae190d0d2c9339a05cb9e0} 
+void draw\+Field (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_game_info__t}{Game\+Info\+\_\+t}}}]{game}{}\end{DoxyParamCaption})}
+
+
+
+Отрисовывает игровое поле. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em game} & Указатель на структуру, содержащую информацию об игре. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{tetris__cli_8h_a1908b0d6804e288c1366fb9da01828f7}\index{tetris\_cli.h@{tetris\_cli.h}!get\_signal@{get\_signal}}
+\index{get\_signal@{get\_signal}!tetris\_cli.h@{tetris\_cli.h}}
+\doxysubsubsection{\texorpdfstring{get\_signal()}{get\_signal()}}
+{\footnotesize\ttfamily \label{tetris__cli_8h_a1908b0d6804e288c1366fb9da01828f7} 
+\mbox{\hyperlink{tetris_8h_a7ba289d7b97db30e0b7041ca2cef75a9}{User\+Action\+\_\+t}} get\+\_\+signal (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Получает пользовательский ввод и возвращает соответствующее действие. 
+
+Функция использует библиотеку {\ttfamily ncurses} для захвата нажатой клавиши и возвращает действие, соответствующее нажатой клавише.
+
+\begin{DoxyReturn}{Returns}
+User\+Action\+\_\+t Возвращает действие в зависимости от нажатой клавиши. 
+\end{DoxyReturn}
+\Hypertarget{tetris__cli_8h_abd1f8c83fcebf1f40bc3fec0f96fb2bb}\index{tetris\_cli.h@{tetris\_cli.h}!initColors@{initColors}}
+\index{initColors@{initColors}!tetris\_cli.h@{tetris\_cli.h}}
+\doxysubsubsection{\texorpdfstring{initColors()}{initColors()}}
+{\footnotesize\ttfamily \label{tetris__cli_8h_abd1f8c83fcebf1f40bc3fec0f96fb2bb} 
+void init\+Colors (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Инициализирует цветовые пары для отрисовки. 
+
+Функция устанавливает цветовые пары, используемые для отрисовки различных элементов игры. \Hypertarget{tetris__cli_8h_a91e37815eef7996d93cecee76fe27857}\index{tetris\_cli.h@{tetris\_cli.h}!printGame@{printGame}}
+\index{printGame@{printGame}!tetris\_cli.h@{tetris\_cli.h}}
+\doxysubsubsection{\texorpdfstring{printGame()}{printGame()}}
+{\footnotesize\ttfamily \label{tetris__cli_8h_a91e37815eef7996d93cecee76fe27857} 
+void print\+Game (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_game_info__t}{Game\+Info\+\_\+t}}}]{game}{, }\item[{struct timespec}]{sp\+\_\+start}{, }\item[{struct timespec}]{sp\+\_\+end}{}\end{DoxyParamCaption})}
+
+
+
+Отображает текущее состояние игры. 
+
+Функция отвечает за отрисовку игрового поля.
+
+
+\begin{DoxyParams}{Parameters}
+{\em game} & Указатель на структуру, содержащую информацию об игре. \\
+\hline
+{\em sp\+\_\+start} & Время начала текущего кадра. \\
+\hline
+{\em sp\+\_\+end} & Время окончания текущего кадра. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{tetris__cli_8h_ad89ae64345ca68d3463195edec7b9c1f}\index{tetris\_cli.h@{tetris\_cli.h}!printInfo@{printInfo}}
+\index{printInfo@{printInfo}!tetris\_cli.h@{tetris\_cli.h}}
+\doxysubsubsection{\texorpdfstring{printInfo()}{printInfo()}}
+{\footnotesize\ttfamily \label{tetris__cli_8h_ad89ae64345ca68d3463195edec7b9c1f} 
+void print\+Info (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_game_info__t}{Game\+Info\+\_\+t}}}]{game}{}\end{DoxyParamCaption})}
+
+
+
+Отображает информацию о текущем состоянии игры. 
+
+Функция выводит информацию о текущем уровне, скорости, очках и рекорде. Также отображает состояние паузы и управляет выводом инструкций по управлению.
+
+
+\begin{DoxyParams}{Parameters}
+{\em game} & Указатель на структуру, содержащую информацию об игре. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{tetris__cli_8h_a3a3a94b9ab7ef94a150097279996b57a}\index{tetris\_cli.h@{tetris\_cli.h}!printNextFigure@{printNextFigure}}
+\index{printNextFigure@{printNextFigure}!tetris\_cli.h@{tetris\_cli.h}}
+\doxysubsubsection{\texorpdfstring{printNextFigure()}{printNextFigure()}}
+{\footnotesize\ttfamily \label{tetris__cli_8h_a3a3a94b9ab7ef94a150097279996b57a} 
+void print\+Next\+Figure (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_game_info__t}{Game\+Info\+\_\+t}}}]{game}{}\end{DoxyParamCaption})}
+
+
+
+Отображает следующую фигуру на экране, которая будет падать. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em game} & Указатель на структуру, содержащую информацию об игре. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{tetris__cli_8h_a4d45e45b472cc7ccaa4507c9234c0659}\index{tetris\_cli.h@{tetris\_cli.h}!timeFunction@{timeFunction}}
+\index{timeFunction@{timeFunction}!tetris\_cli.h@{tetris\_cli.h}}
+\doxysubsubsection{\texorpdfstring{timeFunction()}{timeFunction()}}
+{\footnotesize\ttfamily \label{tetris__cli_8h_a4d45e45b472cc7ccaa4507c9234c0659} 
+void time\+Function (\begin{DoxyParamCaption}\item[{struct timespec}]{sp\+\_\+start}{, }\item[{struct timespec}]{sp\+\_\+end}{, }\item[{int}]{game\+\_\+speed}{}\end{DoxyParamCaption})}
+
+
+
+Обрабатывает задержку, чтобы обеспечить желаемую скорость игры. 
+
+Эта функция вычисляет время, прошедшее между началом и концом итерации игрового цикла. Затем она определяет, необходима ли задержка, чтобы скорость игры соответствовала желаемой. Если прошедшее время меньше требуемого времени для кадра, функция использует {\ttfamily nanosleep}, чтобы приостановить выполнение до тех пор, пока не истечет требуемое время.
+
+
+\begin{DoxyParams}{Parameters}
+{\em sp\+\_\+start} & Время начала итерации игрового цикла, захваченное с помощью {\ttfamily clock\+\_\+gettime()}. \\
+\hline
+{\em sp\+\_\+end} & Время окончания итерации игрового цикла, захваченное с помощью {\ttfamily clock\+\_\+gettime()}. \\
+\hline
+{\em game\+\_\+speed} & Скорость игры, которая влияет на требуемое время задержки.\\
+\hline
+\end{DoxyParams}
+Функция вычисляет необходимое время задержки на основе фиксированной продолжительности кадра (20 мс) и корректирует его в зависимости от параметра {\ttfamily game\+\_\+speed}. Если оставшееся время после итерации игрового цикла положительно, функция вызывает {\ttfamily nanosleep()}, чтобы задержать выполнение. 

@@ -1,0 +1,172 @@
+\doxysection{/\+Users/azaliagm/brick21/\+C7\+\_\+\+Brick\+Game\+\_\+v1.0-\/1/src/brick\+\_\+game/tetris/create.c File Reference}
+\hypertarget{create_8c}{}\label{create_8c}\index{/Users/azaliagm/brick21/C7\_BrickGame\_v1.0-\/1/src/brick\_game/tetris/create.c@{/Users/azaliagm/brick21/C7\_BrickGame\_v1.0-\/1/src/brick\_game/tetris/create.c}}
+{\ttfamily \#include "{}templates.\+h"{}}\newline
+{\ttfamily \#include "{}tetris.\+h"{}}\newline
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{create_8c_a486f7b71aa892de0f05c6187647613b9}{init\+Game}} ()
+\begin{DoxyCompactList}\small\item\em Инициализирует игру. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{struct_game_info__t}{Game\+Info\+\_\+t}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{create_8c_a391319c5061ea17a2165a0aaebd7999d}{create\+Game}} (int field\+\_\+width, int field\+\_\+height, int figures\+\_\+size, int count, \mbox{\hyperlink{struct_tet_block}{Tet\+Block}} \texorpdfstring{$\ast$}{*}\texorpdfstring{$\ast$}{*}figures\+\_\+template)
+\begin{DoxyCompactList}\small\item\em Создаёт объект игры. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{struct_tet_templates}{Tet\+Templates}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{create_8c_a61eb2fe41f887161fc460ee65f8f5aee}{create\+Tet\+Templates}} (int count, int figures\+\_\+size, \mbox{\hyperlink{struct_tet_block}{Tet\+Block}} \texorpdfstring{$\ast$}{*}\texorpdfstring{$\ast$}{*}figures\+\_\+template)
+\begin{DoxyCompactList}\small\item\em Создаёт и инициализирует структуру, содержащую шаблоны фигур. \end{DoxyCompactList}\item 
+int \texorpdfstring{$\ast$}{*}\texorpdfstring{$\ast$}{*} \mbox{\hyperlink{create_8c_ad78d3a2e33b60f6d1a1edc6134133205}{create\+Nextfigure}} (int size)
+\begin{DoxyCompactList}\small\item\em Создаёт массив для следующей фигуры. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{struct_tet_field}{Tet\+Field}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{create_8c_a0cf6260f1a70fe32ba0fedc157a3fb5a}{create\+Tet\+Field}} (int width, int height)
+\begin{DoxyCompactList}\small\item\em Создаёт игровое поле. \end{DoxyCompactList}\item 
+int \texorpdfstring{$\ast$}{*}\texorpdfstring{$\ast$}{*} \mbox{\hyperlink{create_8c_aa32f584a4fcda4c04386a10b01c9851c}{create\+Print\+Field}} (int width, int height)
+\begin{DoxyCompactList}\small\item\em Создает игровое поле для вывода на экран. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{struct_tet_figure}{Tet\+Figure}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{create_8c_a31f1e0464a91c4944e339fe350546e10}{create\+Tet\+Figure}} (\mbox{\hyperlink{struct_game_info__t}{Game\+Info\+\_\+t}} \texorpdfstring{$\ast$}{*}\mbox{\hyperlink{create_8c_aff195c742b1d48adc4e14091fd7d0f06}{game}})
+\begin{DoxyCompactList}\small\item\em Создаёт новую фигуру. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{struct_game_info__t}{Game\+Info\+\_\+t}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{create_8c_aff195c742b1d48adc4e14091fd7d0f06}{game}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Function Documentation}
+\Hypertarget{create_8c_a391319c5061ea17a2165a0aaebd7999d}\index{create.c@{create.c}!createGame@{createGame}}
+\index{createGame@{createGame}!create.c@{create.c}}
+\doxysubsubsection{\texorpdfstring{createGame()}{createGame()}}
+{\footnotesize\ttfamily \label{create_8c_a391319c5061ea17a2165a0aaebd7999d} 
+\mbox{\hyperlink{struct_game_info__t}{Game\+Info\+\_\+t}} \texorpdfstring{$\ast$}{*} create\+Game (\begin{DoxyParamCaption}\item[{int}]{field\+\_\+width}{, }\item[{int}]{field\+\_\+height}{, }\item[{int}]{figures\+\_\+size}{, }\item[{int}]{count}{, }\item[{\mbox{\hyperlink{struct_tet_block}{Tet\+Block}} \texorpdfstring{$\ast$}{*}\texorpdfstring{$\ast$}{*}}]{figures\+\_\+template}{}\end{DoxyParamCaption})}
+
+
+
+Создаёт объект игры. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em field\+\_\+width} & Ширина игрового поля. \\
+\hline
+{\em field\+\_\+height} & Высота игрового поля. \\
+\hline
+{\em figures\+\_\+size} & Размер фигуры. \\
+\hline
+{\em count} & Количество шаблонов фигур. \\
+\hline
+{\em figures\+\_\+template} & Указатель на массив шаблонов фигур. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Указатель на инициализированный объект игры. 
+\end{DoxyReturn}
+\Hypertarget{create_8c_ad78d3a2e33b60f6d1a1edc6134133205}\index{create.c@{create.c}!createNextfigure@{createNextfigure}}
+\index{createNextfigure@{createNextfigure}!create.c@{create.c}}
+\doxysubsubsection{\texorpdfstring{createNextfigure()}{createNextfigure()}}
+{\footnotesize\ttfamily \label{create_8c_ad78d3a2e33b60f6d1a1edc6134133205} 
+int \texorpdfstring{$\ast$}{*}\texorpdfstring{$\ast$}{*} create\+Nextfigure (\begin{DoxyParamCaption}\item[{int}]{size}{}\end{DoxyParamCaption})}
+
+
+
+Создаёт массив для следующей фигуры. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em size} & Размер поля фигуры. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Двумерный массив для представления следующей фигуры. 
+\end{DoxyReturn}
+\Hypertarget{create_8c_aa32f584a4fcda4c04386a10b01c9851c}\index{create.c@{create.c}!createPrintField@{createPrintField}}
+\index{createPrintField@{createPrintField}!create.c@{create.c}}
+\doxysubsubsection{\texorpdfstring{createPrintField()}{createPrintField()}}
+{\footnotesize\ttfamily \label{create_8c_aa32f584a4fcda4c04386a10b01c9851c} 
+int \texorpdfstring{$\ast$}{*}\texorpdfstring{$\ast$}{*} create\+Print\+Field (\begin{DoxyParamCaption}\item[{int}]{width}{, }\item[{int}]{height}{}\end{DoxyParamCaption})}
+
+
+
+Создает игровое поле для вывода на экран. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em width} & Ширина поля. \\
+\hline
+{\em height} & Высота поля. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Двумерный массив для отрисовки поля. 
+\end{DoxyReturn}
+\Hypertarget{create_8c_a0cf6260f1a70fe32ba0fedc157a3fb5a}\index{create.c@{create.c}!createTetField@{createTetField}}
+\index{createTetField@{createTetField}!create.c@{create.c}}
+\doxysubsubsection{\texorpdfstring{createTetField()}{createTetField()}}
+{\footnotesize\ttfamily \label{create_8c_a0cf6260f1a70fe32ba0fedc157a3fb5a} 
+\mbox{\hyperlink{struct_tet_field}{Tet\+Field}} \texorpdfstring{$\ast$}{*} create\+Tet\+Field (\begin{DoxyParamCaption}\item[{int}]{width}{, }\item[{int}]{height}{}\end{DoxyParamCaption})}
+
+
+
+Создаёт игровое поле. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em width} & Ширина игрового поля. \\
+\hline
+{\em height} & Высота игрового поля. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Указатель на созданное игровое поле. 
+\end{DoxyReturn}
+\Hypertarget{create_8c_a31f1e0464a91c4944e339fe350546e10}\index{create.c@{create.c}!createTetFigure@{createTetFigure}}
+\index{createTetFigure@{createTetFigure}!create.c@{create.c}}
+\doxysubsubsection{\texorpdfstring{createTetFigure()}{createTetFigure()}}
+{\footnotesize\ttfamily \label{create_8c_a31f1e0464a91c4944e339fe350546e10} 
+\mbox{\hyperlink{struct_tet_figure}{Tet\+Figure}} \texorpdfstring{$\ast$}{*} create\+Tet\+Figure (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_game_info__t}{Game\+Info\+\_\+t}} \texorpdfstring{$\ast$}{*}}]{game}{}\end{DoxyParamCaption})}
+
+
+
+Создаёт новую фигуру. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em game} & Указатель на объект игры. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Указатель на созданную фигуру, или NULL в случае ошибки. 
+\end{DoxyReturn}
+\Hypertarget{create_8c_a61eb2fe41f887161fc460ee65f8f5aee}\index{create.c@{create.c}!createTetTemplates@{createTetTemplates}}
+\index{createTetTemplates@{createTetTemplates}!create.c@{create.c}}
+\doxysubsubsection{\texorpdfstring{createTetTemplates()}{createTetTemplates()}}
+{\footnotesize\ttfamily \label{create_8c_a61eb2fe41f887161fc460ee65f8f5aee} 
+\mbox{\hyperlink{struct_tet_templates}{Tet\+Templates}} \texorpdfstring{$\ast$}{*} create\+Tet\+Templates (\begin{DoxyParamCaption}\item[{int}]{count}{, }\item[{int}]{figures\+\_\+size}{, }\item[{\mbox{\hyperlink{struct_tet_block}{Tet\+Block}} \texorpdfstring{$\ast$}{*}\texorpdfstring{$\ast$}{*}}]{figures\+\_\+template}{}\end{DoxyParamCaption})}
+
+
+
+Создаёт и инициализирует структуру, содержащую шаблоны фигур. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em count} & Количество шаблонов фигур. \\
+\hline
+{\em figures\+\_\+size} & Размер фигуры. \\
+\hline
+{\em figures\+\_\+template} & Указатель на массив шаблонов фигур. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Указатель на созданные шаблоны фигур. 
+\end{DoxyReturn}
+\Hypertarget{create_8c_a486f7b71aa892de0f05c6187647613b9}\index{create.c@{create.c}!initGame@{initGame}}
+\index{initGame@{initGame}!create.c@{create.c}}
+\doxysubsubsection{\texorpdfstring{initGame()}{initGame()}}
+{\footnotesize\ttfamily \label{create_8c_a486f7b71aa892de0f05c6187647613b9} 
+void init\+Game (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Инициализирует игру. 
+
+Создаёт новый объект игры с параметрами, выделяет память для игрока, устанавливает начальное действие игрока и сбрасывает новую фигуру. 
+
+\doxysubsection{Variable Documentation}
+\Hypertarget{create_8c_aff195c742b1d48adc4e14091fd7d0f06}\index{create.c@{create.c}!game@{game}}
+\index{game@{game}!create.c@{create.c}}
+\doxysubsubsection{\texorpdfstring{game}{game}}
+{\footnotesize\ttfamily \label{create_8c_aff195c742b1d48adc4e14091fd7d0f06} 
+\mbox{\hyperlink{struct_game_info__t}{Game\+Info\+\_\+t}}\texorpdfstring{$\ast$}{*} game}
+

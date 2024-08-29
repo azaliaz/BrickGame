@@ -1,0 +1,88 @@
+\chapter{Brick\+Game Тетрис}
+\hypertarget{index}{}\label{index}\index{BrickGame Тетрис@{BrickGame Тетрис}}
+\hypertarget{index_autotoc_md0}{}\doxysection{\texorpdfstring{Brick\+Game}{Brick\+Game}}\label{index_autotoc_md0}
+\hypertarget{index_autotoc_md1}{}\doxysubsubsection{\texorpdfstring{Введение}{Введение}}\label{index_autotoc_md1}
+Brick\+Game — это консольная игра Тетрис, разработанная на C с использованием библиотеки ncurses.\+в которой игроки управляют падающими фигурами с целью заполнить горизонтальные линии на игровом поле. Игра заканчивается, когда блоки не могут больше поместиться на поле.    \hypertarget{index_autotoc_md2}{}\doxysubsection{\texorpdfstring{Основные особенности}{Основные особенности}}\label{index_autotoc_md2}
+\hypertarget{index_autotoc_md3}{}\doxysubsubsection{\texorpdfstring{Игровое поле\+:}{Игровое поле\+:}}\label{index_autotoc_md3}
+
+\begin{DoxyItemize}
+\item Размер\+: 10x20 ячеек.
+\item Элементы\+: Блоки разной формы и цвета, которые падают сверху и должны быть уложены в горизонтальные линии. 
+\end{DoxyItemize}\hypertarget{index_autotoc_md4}{}\doxysubsubsection{\texorpdfstring{Управление и механика\+:}{Управление и механика\+:}}\label{index_autotoc_md4}
+
+\begin{DoxyItemize}
+\item Начать новую игру -\/ \textquotesingle{}enter\textquotesingle{}
+\item Приостановка игры с помощью клавиши \textquotesingle{}p\textquotesingle{}
+\item Завершить игру -\/ \textquotesingle{}esc\textquotesingle{}
+\item Движение влево -\/ стрелка влево
+\item Движение вправо -\/ стрелка вправо
+\item Движение вниз -\/ стрелка вниз
+\item Ускорение падения фигуры (при нажатии кнопки фигура перемещается до конца вниз)
+\item Поворот -\/ кнопка \textquotesingle{}z\textquotesingle{}
+\item Отображается следующая фигура, которая появится после текущей.
+\item Завершение игры при достижении верхней границы игрового поля; 
+\end{DoxyItemize}\hypertarget{index_autotoc_md5}{}\doxysubsubsection{\texorpdfstring{Очки и уровни\+:}{Очки и уровни\+:}}\label{index_autotoc_md5}
+
+\begin{DoxyItemize}
+\item Игроки зарабатывают очки за удаление линий.
+\item Уровни повышаются по мере набора очков, что увеличивает скорость падения фигур. 
+\end{DoxyItemize}\hypertarget{index_autotoc_md6}{}\doxysubsubsection{\texorpdfstring{Подсчет очков\+:}{Подсчет очков\+:}}\label{index_autotoc_md6}
+
+\begin{DoxyItemize}
+\item 1 линия очищена\+: 100 очков
+\item 2 линии очищены\+: 300 очков
+\item 3 линии очищены\+: 700 очков
+\item 4 линии очищены\+: 1500 очков
+\end{DoxyItemize}\hypertarget{index_autotoc_md7}{}\doxysubsection{\texorpdfstring{Дополнительно}{Дополнительно}}\label{index_autotoc_md7}
+\hypertarget{index_autotoc_md8}{}\doxysubsubsection{\texorpdfstring{Подсчет очков и рекорд в игре}{Подсчет очков и рекорд в игре}}\label{index_autotoc_md8}
+
+\begin{DoxyItemize}
+\item Высокий счет сохраняется для каждого сеанса игры.
+\item Отображение текущего счета игрока и достигнутого рекорда 
+\end{DoxyItemize}\hypertarget{index_autotoc_md9}{}\doxysubsubsection{\texorpdfstring{Механика уровней}{Механика уровней}}\label{index_autotoc_md9}
+
+\begin{DoxyItemize}
+\item Каждый раз, когда игрок набирает 600 очков, уровень увеличивается на 1
+\item Повышение уровня увеличивает скорость движения фигур. Максимальное количество уровней — 10
+\end{DoxyItemize}\hypertarget{index_autotoc_md10}{}\doxysubsection{\texorpdfstring{Установка}{Установка}}\label{index_autotoc_md10}
+
+\begin{DoxyEnumerate}
+\item {\ttfamily git clone XXX \&\& cd src}
+\item Перейдите в директорию {\ttfamily src/}.
+\item Для установки проекта выполните {\ttfamily make install}
+\item Для начала игры выполните {\ttfamily make run}
+\end{DoxyEnumerate}\hypertarget{index_autotoc_md11}{}\doxysubsection{\texorpdfstring{Использование}{Использование}}\label{index_autotoc_md11}
+
+\begin{DoxyItemize}
+\item Используйте стрелки для перемещения.
+\item Нажмите стрелку вниз, чтобы фигура падала быстрее.
+\item Нажмите \textquotesingle{}z\textquotesingle{}, чтобы вращать фигуру.
+\end{DoxyItemize}\hypertarget{index_autotoc_md12}{}\doxysubsection{\texorpdfstring{Диаграмма конечного автомата, используемый в логике игры.}{Диаграмма конечного автомата, используемый в логике игры.}}\label{index_autotoc_md12}
+ \hypertarget{index_autotoc_md13}{}\doxysubsubsection{\texorpdfstring{INIT\+:}{INIT\+:}}\label{index_autotoc_md13}
+
+\begin{DoxyItemize}
+\item Переход к DROP\+: Игра начата, блок начинает падать. 
+\end{DoxyItemize}\hypertarget{index_autotoc_md14}{}\doxysubsubsection{\texorpdfstring{DROP\+:}{DROP\+:}}\label{index_autotoc_md14}
+
+\begin{DoxyItemize}
+\item Переход к MOVING\+: Как только блок достиг нижней границы или соприкоснулся с другими блоками, он начинает двигаться.
+\item Переход к GAMEOVER через COLLISION\+: Если блок достиг верхней границы игрового поля. 
+\end{DoxyItemize}\hypertarget{index_autotoc_md15}{}\doxysubsubsection{\texorpdfstring{MOVING\+:}{MOVING\+:}}\label{index_autotoc_md15}
+
+\begin{DoxyItemize}
+\item Переход к COLLISION\+: Блок сталкивается с другой фигурой или нижней границей.
+\item Переход к PAUSE\+: Игрок нажимает кнопку паузы. 
+\end{DoxyItemize}\hypertarget{index_autotoc_md16}{}\doxysubsubsection{\texorpdfstring{COLLISION\+:}{COLLISION\+:}}\label{index_autotoc_md16}
+
+\begin{DoxyItemize}
+\item Переход к DROP\+: После обработки столкновения генерируется новый блок.
+\item Переход к GAMEOVER\+: Если произошла ошибка, например, блоки достигли верхней границы. 
+\end{DoxyItemize}\hypertarget{index_autotoc_md17}{}\doxysubsubsection{\texorpdfstring{PAUSE\+:}{PAUSE\+:}}\label{index_autotoc_md17}
+
+\begin{DoxyItemize}
+\item Переход к MOVING\+: Игра возобновляется после паузы. 
+\end{DoxyItemize}\hypertarget{index_autotoc_md18}{}\doxysubsubsection{\texorpdfstring{GAMEOVER\+:}{GAMEOVER\+:}}\label{index_autotoc_md18}
+
+\begin{DoxyItemize}
+\item Конец игры. 
+\end{DoxyItemize}
